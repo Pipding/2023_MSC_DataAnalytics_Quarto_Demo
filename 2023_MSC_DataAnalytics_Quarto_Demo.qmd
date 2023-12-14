@@ -1,0 +1,119 @@
+---
+title: "Data Analysis for Interactive Environments"
+subtitle: "ICA - Analysis of..."
+author: "Jane J. Jones"
+date: "12/14/2023" #US-format
+execute:
+  echo: true
+  warning: false
+  cache: true  
+format: 
+  html:
+    theme: "journal"  #https://quarto.org/docs/output-formats/html-themes.html
+    #toc
+    toc: true
+    toc-location: left
+    toc-title: "Table of Contents"
+    number-sections: false
+    #figures
+    fig-align: center
+    fig-width: 6
+    fig-height: 4
+    fig-dpi: 200 
+    fig-format: png
+    fig-cap-location: bottom
+    #tables
+    tbl-cap-location: bottom
+    #links
+    link-external-newwindow: true
+    link-external-icon: true
+    #code
+    code-tools: true
+    code-line-numbers: true
+    code-summary: "A summary of code"
+    code-fold: true
+    code-block-border-left: true
+    code-overflow: scroll
+    code-copy: true
+    code-link: true
+    code-block-bg: true
+    #footnotes
+    footnotes-hover: true
+    reference-location: document
+    #citation
+    citation: true
+    lang: en-GB
+    citations-hover: true
+    citation-location: document
+    #bibliography
+    bibliography: references.bib
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+# gives us ggplot2, dplyr, readr, tibble etc
+if(!require("tidyverse"))
+  install.packages("tidyverse")
+library(tidyverse)
+
+```
+
+## Quarto
+
+In Quarto enables you to weave together content and executable code into a finished document. To learn more about see [Quarto](https://quarto.org)
+
+## Descriptive Statistics - Air Quality
+
+@fig-airquality explores the impact of temperature on ozone[^1] level...
+
+[^1]: Ozone is a molecule composed of three oxygen atoms.
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| echo: true
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```
+
+
+@fig-ozone shows the key statistics measures and an outline of central tendency, spread, and skewness of ozone level.
+
+```{r}
+#| label: fig-ozone
+#| fig-cap: "Ozone level."
+#| echo: false
+
+boxplot(airquality$Ozone)
+
+```
+
+@tbl-airquality presents....
+
+```{r}
+#| label: tbl-airquality
+#| tbl-cap: Air Quality Heads
+#| echo: false
+
+knitr::kable(head(airquality))
+
+```
+
+@tbl-airqualitytail presents....
+
+```{r}
+#| label: tbl-airqualitytail
+#| tbl-cap: Air Quality Tails
+#| echo: false
+
+knitr::kable(tail(airquality))
+
+```
+
+According to @smith2023 we may consider....and is proven [@smith2023; @doe2021]. A number of online sources [@quartoofficial] report...
+
+
