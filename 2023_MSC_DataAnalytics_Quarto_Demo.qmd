@@ -11,8 +11,10 @@ execute:
   
 format: 
   html:
-    highlight-style: arrow
-    theme: 
+    #code colouring
+    highlight-style: arrow 
+    #add a dark/light toggle in the top RHS of the page - make sure you maximise the browser window in case you cant see the toggle 
+    theme:            
       light: journal
       dark: darkly
     #toc
