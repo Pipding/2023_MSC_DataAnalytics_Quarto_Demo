@@ -222,4 +222,5 @@ To add a bibliography all we need to do is the following:
 
 * [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html)
 * [YouTube - Hello, Quarto: A World of Possibilities (for Reproducible Publishing)](https://youtu.be/Qrz2rUWM-uY)
+* [YouTube - Beautiful reports and presentations with Quarto](https://youtu.be/hbf7Ai3jnxY?t=1693)
 
