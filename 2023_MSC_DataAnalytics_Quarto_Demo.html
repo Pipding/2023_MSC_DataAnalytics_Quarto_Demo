@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Jane J. Jones">
 <meta name="dcterms.date" content="2023-12-14">
+
 <title>Data Analysis for Interactive Environments</title>
 <style>
 code{white-space: pre-wrap;}
@@ -74,32 +77,48 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
+
 <script src="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/clipboard/clipboard.min.js"></script>
 <script src="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/quarto.js"></script>
 <script src="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/popper.min.js"></script>
 <script src="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/anchor.min.js"></script>
 <link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="2023_MSC_DataAnalytics_Quarto_Demo_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+
+
 </head>
+
 <body>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of Contents</h2>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of Contents</h2>
    
   <ul>
-<li><a href="#quarto" id="toc-quarto" class="nav-link active" data-scroll-target="#quarto">Quarto</a></li>
-  <li><a href="#descriptive-statistics---air-quality" id="toc-descriptive-statistics---air-quality" class="nav-link" data-scroll-target="#descriptive-statistics---air-quality">Descriptive Statistics - Air Quality</a></li>
-  </ul></nav>
+  <li><a href="#quarto-document-overview" id="toc-quarto-document-overview" class="nav-link active" data-scroll-target="#quarto-document-overview">Quarto Document Overview</a>
+  <ul class="collapse">
+  <li><a href="#opml-header-options" id="toc-opml-header-options" class="nav-link" data-scroll-target="#opml-header-options">OPML Header Options</a></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references">Cross References</a></li>
+  <li><a href="#footnotes" id="toc-footnotes" class="nav-link" data-scroll-target="#footnotes">Footnotes</a></li>
+  <li><a href="#citations-bibliography" id="toc-citations-bibliography" class="nav-link" data-scroll-target="#citations-bibliography">Citations &amp; Bibliography</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Data Analysis for Interactive Environments</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Analysis for Interactive Environments</h1>
 <p class="subtitle lead">ICA - Analysis of…</p>
 </div>
 
@@ -125,44 +144,78 @@ div.csl-indent {
   </div>
   
 
-</header><section id="quarto" class="level2"><h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>In Quarto enables you to weave together content and executable code into a finished document. To learn more about see <a href="https://quarto.org">Quarto</a></p>
-</section><section id="descriptive-statistics---air-quality" class="level2"><h2 class="anchored" data-anchor-id="descriptive-statistics---air-quality">Descriptive Statistics - Air Quality</h2>
-<p><a href="#fig-airquality">Figure&nbsp;1</a> explores the impact of temperature on ozone<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> level…</p>
-<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/fig-airquality_b268c1a42d9049029d3e6b680da761a1">
-<details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb1-3"><a href="#cb1-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+</header>
+
+<section id="quarto-document-overview" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-document-overview">Quarto Document Overview</h2>
+<p>This example illustrates some useful functionality within Quarto including the following:</p>
+<section id="opml-header-options" class="level3">
+<h3 class="anchored" data-anchor-id="opml-header-options">OPML Header Options</h3>
+<ul>
+<li><a href="https://quarto.org/docs/reference/formats/opml.html">OPML Header Options</a> header</li>
+<li><a href="https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/">Pandoc Syntax Highlighting Examples</a></li>
+<li><a href="https://quarto.org/docs/output-formats/html-code.html">Code Formatting</a></li>
+</ul>
+</section>
+<section id="cross-references" class="level3">
+<h3 class="anchored" data-anchor-id="cross-references">Cross References</h3>
+<p><a href="https://quarto.org/docs/authoring/cross-references.html">Cross-references</a> make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables.</p>
+<section id="some-examples" class="level4">
+<h4 class="anchored" data-anchor-id="some-examples">Some Examples</h4>
+<p><a href="#fig-airquality">Figure&nbsp;1</a> explores the impact of CO2 on…</p>
+<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/fig-airquality_f8d402684b0a0d53b04166228a3ce049">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="2023_MSC_DataAnalytics_Quarto_Demo_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption></figure>
+<figure class="figure">
+<p><img src="2023_MSC_DataAnalytics_Quarto_Demo_files/figure-html/fig-airquality-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Temperature and ozone level.</figcaption>
+</figure>
 </div>
 </div>
 </div>
+<p>Notice that we can add annotations in the R chunk (i.e.&nbsp;the grey sections that contains R code) to do things like set caption, width, dpi, label, etc.</p>
 <p><a href="#fig-ozone">Figure&nbsp;2</a> shows the key statistics measures and an outline of central tendency, spread, and skewness of ozone level.</p>
-<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/fig-ozone_1392c1a78758267e9d811ef3ca6973d0">
+<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/fig-ozone_ba31196817f47c0d21a3ca210245475d">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(airquality<span class="sc">$</span>Ozone)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="fig-ozone" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="2023_MSC_DataAnalytics_Quarto_Demo_files/figure-html/fig-ozone-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Ozone level.</figcaption></figure>
+<figure class="figure">
+<p><img src="2023_MSC_DataAnalytics_Quarto_Demo_files/figure-html/fig-ozone-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Ozone level.</figcaption>
+</figure>
 </div>
 </div>
 </div>
+<p>Notice also how the table and figure numbers are automatically set by Quarto. If we re-arrange these elements then the numbers will update automatically.</p>
 <p><a href="#tbl-airquality">Table&nbsp;1</a> presents….</p>
-<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/tbl-airquality_998f48fe32c6661a2730feab2c71aafb">
+<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/tbl-airquality_4b136ab3e4ab3254022f5333d634542a">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(airquality))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="tbl-airquality" class="anchored">
 <table class="table table-sm table-striped small">
 <caption>Table&nbsp;1: Air Quality Heads</caption>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: right;">Ozone</th>
 <th style="text-align: right;">Solar.R</th>
 <th style="text-align: right;">Wind</th>
 <th style="text-align: right;">Temp</th>
 <th style="text-align: right;">Month</th>
 <th style="text-align: right;">Day</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">41</td>
@@ -217,13 +270,19 @@ div.csl-indent {
 </div>
 </div>
 </div>
+<p>We can also do override the settings in the OPML header above and turn source code off with <em>echo</em> set to false, turn off warnings, and disable caching for a specific chunk of code.</p>
 <p><a href="#tbl-airqualitytail">Table&nbsp;2</a> presents….</p>
-<div class="cell" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/tbl-airqualitytail_8be2ed881a5c78762da0c23754e341be">
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">tail</span>(airquality))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output-display">
 <div id="tbl-airqualitytail" class="anchored">
 <table class="table table-sm table-striped small">
 <caption>Table&nbsp;2: Air Quality Tails</caption>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;"></th>
 <th style="text-align: right;">Ozone</th>
 <th style="text-align: right;">Solar.R</th>
@@ -231,7 +290,8 @@ div.csl-indent {
 <th style="text-align: right;">Temp</th>
 <th style="text-align: right;">Month</th>
 <th style="text-align: right;">Day</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">148</td>
@@ -292,11 +352,35 @@ div.csl-indent {
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="footnotes" class="level3">
+<h3 class="anchored" data-anchor-id="footnotes">Footnotes</h3>
+<p>Quarto will use Pandoc to automatically generate <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">footnotes</a> in a number of styles.</p>
+<section id="some-examples-1" class="level4">
+<h4 class="anchored" data-anchor-id="some-examples-1">Some Examples</h4>
+<p>When considering the impact of Sea surface temperature<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> on Ozone<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> level…</p>
+</section>
+</section>
+<section id="citations-bibliography" class="level3">
+<h3 class="anchored" data-anchor-id="citations-bibliography">Citations &amp; Bibliography</h3>
+<p>Quarto will use Pandoc to automatically generate <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">citations and a bibliography</a> in a number of styles.</p>
+<section id="some-examples-2" class="level4">
+<h4 class="anchored" data-anchor-id="some-examples-2">Some Examples</h4>
 <p>According to <span class="citation" data-cites="smith2023">Smith (<a href="#ref-smith2023" role="doc-biblioref">2023</a>)</span> we may consider….and is proven <span class="citation" data-cites="smith2023 doe2021">(<a href="#ref-smith2023" role="doc-biblioref">Smith 2023</a>; <a href="#ref-doe2021" role="doc-biblioref">Doe and Johnson 2021</a>)</span>. A number of online sources <span class="citation" data-cites="quartoofficial">(<a href="#ref-quartoofficial" role="doc-biblioref">Quarto Development Team 2023</a>)</span> report…</p>
-<!-- -->
+<p>To add a bibliography all we need to do is the following:</p>
+<ol type="1">
+<li>Create a <a href="https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo/blob/main/references.bib">references.bib</a> file in the folder as this document.</li>
+<li>Add a reference to this bib file in the OPML header above.</li>
+<li>Populate the bib file with <a href="https://www.bibtex.org/Format/">BibTeX</a> compatible citations which you can easily generate using <a href="https://www.bibme.org/bibtex">free online tools</a></li>
+</ol>
+
+</section>
+</section>
+</section>
 
 
-</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-doe2021" class="csl-entry" role="listitem">
 Doe, Jane, and Michael Johnson. 2021. <span>‘Advancements in Quantum Computing’</span>. <em>Journal of Computing Research</em> 25 (4): 112–30.
 </div>
@@ -307,9 +391,12 @@ Quarto Development Team. 2023. <span>‘Quarto Documentation’</span>. 2023. <a
 Smith, John. 2023. <span>‘Example Article’</span>. <em>Journal of DAIE</em> 42 (3): 123–45.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
 <ol>
-<li id="fn1"><p>Ozone is a molecule composed of three oxygen atoms.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{j. jones2023,
+<li id="fn1"><p>Sea surface temperature (SST), or ocean surface temperature, is the ocean temperature close to the surface.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Ozone is a molecule composed of three oxygen atoms.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{j. jones2023,
   author = {J. Jones, Jane},
   title = {Data {Analysis} for {Interactive} {Environments}},
   date = {2023-12-14},
@@ -318,7 +405,9 @@ Smith, John. 2023. <span>‘Example Article’</span>. <em>Journal of DAIE</em> 
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-j. jones2023" class="csl-entry quarto-appendix-citeas" role="listitem">
 J. Jones, Jane. 2023. <span>“Data Analysis for Interactive
 Environments.”</span> December 14, 2023.
-</div></div></section></div></main><!-- /main column --><script id="quarto-html-after-body" type="application/javascript">
+</div></div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -338,6 +427,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -397,57 +601,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -617,127 +770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Data Analysis for Interactive Environments"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="an">subtitle:</span><span class="co"> "ICA - Analysis of..."</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="an">author:</span><span class="co"> "Jane J. Jones"</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="an">date:</span><span class="co"> "12/14/2023" #US-format</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="an">execute:</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co">  echo: true</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co">  warning: false</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a><span class="co">  cache: true  </span></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co">  html:</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="co">    theme: "journal"  #https://quarto.org/docs/output-formats/html-themes.html</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co">    #toc</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co">    toc: true</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="co">    toc-location: left</span></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="co">    toc-title: "Table of Contents"</span></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co">    number-sections: false</span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co">    #figures</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="co">    fig-align: center</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a><span class="co">    fig-width: 6</span></span>
-<span id="cb2-21"><a href="#cb2-21"></a><span class="co">    fig-height: 4</span></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="co">    fig-dpi: 200 </span></span>
-<span id="cb2-23"><a href="#cb2-23"></a><span class="co">    fig-format: png</span></span>
-<span id="cb2-24"><a href="#cb2-24"></a><span class="co">    fig-cap-location: bottom</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a><span class="co">    #tables</span></span>
-<span id="cb2-26"><a href="#cb2-26"></a><span class="co">    tbl-cap-location: bottom</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a><span class="co">    #links</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a><span class="co">    link-external-newwindow: true</span></span>
-<span id="cb2-29"><a href="#cb2-29"></a><span class="co">    link-external-icon: true</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="co">    #code</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a><span class="co">    code-tools: true</span></span>
-<span id="cb2-32"><a href="#cb2-32"></a><span class="co">    code-line-numbers: true</span></span>
-<span id="cb2-33"><a href="#cb2-33"></a><span class="co">    code-summary: "A summary of code"</span></span>
-<span id="cb2-34"><a href="#cb2-34"></a><span class="co">    code-fold: true</span></span>
-<span id="cb2-35"><a href="#cb2-35"></a><span class="co">    code-block-border-left: true</span></span>
-<span id="cb2-36"><a href="#cb2-36"></a><span class="co">    code-overflow: scroll</span></span>
-<span id="cb2-37"><a href="#cb2-37"></a><span class="co">    code-copy: true</span></span>
-<span id="cb2-38"><a href="#cb2-38"></a><span class="co">    code-link: true</span></span>
-<span id="cb2-39"><a href="#cb2-39"></a><span class="co">    code-block-bg: true</span></span>
-<span id="cb2-40"><a href="#cb2-40"></a><span class="co">    #footnotes</span></span>
-<span id="cb2-41"><a href="#cb2-41"></a><span class="co">    footnotes-hover: true</span></span>
-<span id="cb2-42"><a href="#cb2-42"></a><span class="co">    reference-location: document</span></span>
-<span id="cb2-43"><a href="#cb2-43"></a><span class="co">    #citation</span></span>
-<span id="cb2-44"><a href="#cb2-44"></a><span class="co">    citation: true</span></span>
-<span id="cb2-45"><a href="#cb2-45"></a><span class="co">    lang: en-GB</span></span>
-<span id="cb2-46"><a href="#cb2-46"></a><span class="co">    citations-hover: true</span></span>
-<span id="cb2-47"><a href="#cb2-47"></a><span class="co">    citation-location: document</span></span>
-<span id="cb2-48"><a href="#cb2-48"></a><span class="co">    #bibliography</span></span>
-<span id="cb2-49"><a href="#cb2-49"></a><span class="co">    bibliography: references.bib</span></span>
-<span id="cb2-50"><a href="#cb2-50"></a><span class="co">---</span></span>
-<span id="cb2-51"><a href="#cb2-51"></a></span>
-<span id="cb2-54"><a href="#cb2-54"></a><span class="in">```{r}</span></span>
-<span id="cb2-55"><a href="#cb2-55"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-56"><a href="#cb2-56"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-57"><a href="#cb2-57"></a></span>
-<span id="cb2-58"><a href="#cb2-58"></a><span class="co"># gives us ggplot2, dplyr, readr, tibble etc</span></span>
-<span id="cb2-59"><a href="#cb2-59"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(<span class="st">"tidyverse"</span>))</span>
-<span id="cb2-60"><a href="#cb2-60"></a>  <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-61"><a href="#cb2-61"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-62"><a href="#cb2-62"></a></span>
-<span id="cb2-63"><a href="#cb2-63"></a><span class="in">```</span></span>
-<span id="cb2-64"><a href="#cb2-64"></a></span>
-<span id="cb2-65"><a href="#cb2-65"></a><span class="fu">## Quarto</span></span>
-<span id="cb2-66"><a href="#cb2-66"></a></span>
-<span id="cb2-67"><a href="#cb2-67"></a>In Quarto enables you to weave together content and executable code into a finished document. To learn more about see <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org)</span></span>
-<span id="cb2-68"><a href="#cb2-68"></a></span>
-<span id="cb2-69"><a href="#cb2-69"></a><span class="fu">## Descriptive Statistics - Air Quality</span></span>
-<span id="cb2-70"><a href="#cb2-70"></a></span>
-<span id="cb2-71"><a href="#cb2-71"></a>@fig-airquality explores the impact of temperature on ozone<span class="ot">[^1]</span> level...</span>
-<span id="cb2-72"><a href="#cb2-72"></a></span>
-<span id="cb2-73"><a href="#cb2-73"></a><span class="ot">[^1]: </span>Ozone is a molecule composed of three oxygen atoms.</span>
-<span id="cb2-74"><a href="#cb2-74"></a></span>
-<span id="cb2-77"><a href="#cb2-77"></a><span class="in">```{r}</span></span>
-<span id="cb2-78"><a href="#cb2-78"></a><span class="co">#| label: fig-airquality</span></span>
-<span id="cb2-79"><a href="#cb2-79"></a><span class="co">#| fig-cap: "Temperature and ozone level."</span></span>
-<span id="cb2-80"><a href="#cb2-80"></a><span class="co">#| echo: true</span></span>
-<span id="cb2-81"><a href="#cb2-81"></a></span>
-<span id="cb2-82"><a href="#cb2-82"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb2-83"><a href="#cb2-83"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb2-84"><a href="#cb2-84"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>)</span>
-<span id="cb2-85"><a href="#cb2-85"></a><span class="in">```</span></span>
-<span id="cb2-86"><a href="#cb2-86"></a></span>
-<span id="cb2-87"><a href="#cb2-87"></a></span>
-<span id="cb2-88"><a href="#cb2-88"></a>@fig-ozone shows the key statistics measures and an outline of central tendency, spread, and skewness of ozone level.</span>
-<span id="cb2-89"><a href="#cb2-89"></a></span>
-<span id="cb2-92"><a href="#cb2-92"></a><span class="in">```{r}</span></span>
-<span id="cb2-93"><a href="#cb2-93"></a><span class="co">#| label: fig-ozone</span></span>
-<span id="cb2-94"><a href="#cb2-94"></a><span class="co">#| fig-cap: "Ozone level."</span></span>
-<span id="cb2-95"><a href="#cb2-95"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-96"><a href="#cb2-96"></a></span>
-<span id="cb2-97"><a href="#cb2-97"></a><span class="fu">boxplot</span>(airquality<span class="sc">$</span>Ozone)</span>
-<span id="cb2-98"><a href="#cb2-98"></a></span>
-<span id="cb2-99"><a href="#cb2-99"></a><span class="in">```</span></span>
-<span id="cb2-100"><a href="#cb2-100"></a></span>
-<span id="cb2-101"><a href="#cb2-101"></a>@tbl-airquality presents....</span>
-<span id="cb2-102"><a href="#cb2-102"></a></span>
-<span id="cb2-105"><a href="#cb2-105"></a><span class="in">```{r}</span></span>
-<span id="cb2-106"><a href="#cb2-106"></a><span class="co">#| label: tbl-airquality</span></span>
-<span id="cb2-107"><a href="#cb2-107"></a><span class="co">#| tbl-cap: Air Quality Heads</span></span>
-<span id="cb2-108"><a href="#cb2-108"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-109"><a href="#cb2-109"></a></span>
-<span id="cb2-110"><a href="#cb2-110"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(airquality))</span>
-<span id="cb2-111"><a href="#cb2-111"></a></span>
-<span id="cb2-112"><a href="#cb2-112"></a><span class="in">```</span></span>
-<span id="cb2-113"><a href="#cb2-113"></a></span>
-<span id="cb2-114"><a href="#cb2-114"></a>@tbl-airqualitytail presents....</span>
-<span id="cb2-115"><a href="#cb2-115"></a></span>
-<span id="cb2-118"><a href="#cb2-118"></a><span class="in">```{r}</span></span>
-<span id="cb2-119"><a href="#cb2-119"></a><span class="co">#| label: tbl-airqualitytail</span></span>
-<span id="cb2-120"><a href="#cb2-120"></a><span class="co">#| tbl-cap: Air Quality Tails</span></span>
-<span id="cb2-121"><a href="#cb2-121"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-122"><a href="#cb2-122"></a></span>
-<span id="cb2-123"><a href="#cb2-123"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">tail</span>(airquality))</span>
-<span id="cb2-124"><a href="#cb2-124"></a></span>
-<span id="cb2-125"><a href="#cb2-125"></a><span class="in">```</span></span>
-<span id="cb2-126"><a href="#cb2-126"></a></span>
-<span id="cb2-127"><a href="#cb2-127"></a>According to @smith2023 we may consider....and is proven <span class="co">[</span><span class="ot">@smith2023; @doe2021</span><span class="co">]</span>. A number of online sources <span class="co">[</span><span class="ot">@quartoofficial</span><span class="co">]</span> report...</span>
-<span id="cb2-128"><a href="#cb2-128"></a></span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</script>
 </div> <!-- /content -->
 
 

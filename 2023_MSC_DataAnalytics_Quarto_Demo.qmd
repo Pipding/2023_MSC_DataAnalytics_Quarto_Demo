@@ -2,51 +2,53 @@
 title: "Data Analysis for Interactive Environments"
 subtitle: "ICA - Analysis of..."
 author: "Jane J. Jones"
-date: "12/14/2023" #US-format
+date: "12.14.2023" #US-format
+#execute - not everyone wants to see code (echo) or internal warnings and we can also cache code output to speed up our render process - we can still override this in the code chunks (see below)
 execute:
   echo: true
   warning: false
-  cache: true  
+  cache: true
+  
 format: 
   html:
-    theme: "journal"  #https://quarto.org/docs/output-formats/html-themes.html
+    highlight-style: arrow
+    theme: 
+      light: journal
+      dark: darkly
     #toc
     toc: true
     toc-location: left
-    toc-title: "Table of Contents"
+    toc-title: Table of Contents
     number-sections: false
-    #figures
-    fig-align: center
-    fig-width: 6
-    fig-height: 4
-    fig-dpi: 200 
-    fig-format: png
-    fig-cap-location: bottom
-    #tables
-    tbl-cap-location: bottom
     #links
     link-external-newwindow: true
     link-external-icon: true
-    #code
-    code-tools: true
-    code-line-numbers: true
-    code-summary: "A summary of code"
-    code-fold: true
-    code-block-border-left: true
-    code-overflow: scroll
-    code-copy: true
-    code-link: true
-    code-block-bg: true
-    #footnotes
+    #citations & footnotes - allow us to hover over these elements and see content
+    citations-hover: true
     footnotes-hover: true
-    reference-location: document
+    #code
+    code-fold: true
+    code-summary: Hidden Code
+    # code-tools: true
+    # code-line-numbers: true
+    # code-summary: "A summary of code"
+    # code-fold: true
+    # code-block-border-left: true
+    # code-overflow: scroll
+    # code-copy: true
+    # code-link: true
+    # code-block-bg: true
+
+    # footnotes-hover: true
+    # reference-location: margin
+    
+    # citations-hover: true
+    # citation-location: document
+    #bibliography
+    bibliography: references.bib
     #citation
     citation: true
     lang: en-GB
-    citations-hover: true
-    citation-location: document
-    #bibliography
-    bibliography: references.bib
 ---
 
 ```{r}
@@ -60,15 +62,23 @@ library(tidyverse)
 
 ```
 
-## Quarto
+## Quarto Document Overview
 
-In Quarto enables you to weave together content and executable code into a finished document. To learn more about see [Quarto](https://quarto.org)
+This example illustrates some useful functionality within Quarto including the following:
 
-## Descriptive Statistics - Air Quality
+### OPML Header Options
 
-@fig-airquality explores the impact of temperature on ozone[^1] level...
+* [OPML Header Options](https://quarto.org/docs/reference/formats/opml.html) header 
+* [Pandoc Syntax Highlighting Examples](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)
+* [Code Formatting](https://quarto.org/docs/output-formats/html-code.html)
 
-[^1]: Ozone is a molecule composed of three oxygen atoms.
+### Cross References
+
+[Cross-references](https://quarto.org/docs/authoring/cross-references.html) make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables. 
+
+#### Some Examples
+
+@fig-airquality explores the impact of CO2 on...
 
 ```{r}
 #| label: fig-airquality
@@ -80,40 +90,70 @@ ggplot(airquality, aes(Temp, Ozone)) +
   geom_smooth(method = "loess")
 ```
 
+Notice that we can add annotations in the R chunk (i.e. the grey sections that contains R code) to do things like set caption, width, dpi, label, etc.
 
 @fig-ozone shows the key statistics measures and an outline of central tendency, spread, and skewness of ozone level.
 
 ```{r}
 #| label: fig-ozone
 #| fig-cap: "Ozone level."
-#| echo: false
-
+#| echo: true
+#| 
 boxplot(airquality$Ozone)
 
 ```
+
+Notice also how the table and figure numbers are automatically set by Quarto. If we re-arrange these elements then the numbers will update automatically. 
 
 @tbl-airquality presents....
 
 ```{r}
 #| label: tbl-airquality
 #| tbl-cap: Air Quality Heads
-#| echo: false
+#| echo: true
 
 knitr::kable(head(airquality))
 
 ```
+
+We can also do override the settings in the OPML header above and turn source code off with *echo* set to false, turn off warnings, and disable caching for a specific chunk of code.
 
 @tbl-airqualitytail presents....
 
 ```{r}
 #| label: tbl-airqualitytail
 #| tbl-cap: Air Quality Tails
-#| echo: false
+#| echo: true
+#| warning: true
+#| cache: false
 
 knitr::kable(tail(airquality))
 
 ```
 
+### Footnotes
+
+Quarto will use Pandoc to automatically generate [footnotes](https://quarto.org/docs/authoring/footnotes-and-citations.html) in a number of styles.
+
+#### Some Examples
+
+When considering the impact of Sea surface
+temperature[^1] on Ozone[^2] level...
+
+[^1]: Sea surface temperature (SST), or ocean surface temperature, is the ocean temperature close to the surface.
+
+[^2]: Ozone is a molecule composed of three oxygen atoms.
+
+### Citations & Bibliography
+
+Quarto will use Pandoc to automatically generate [citations and a bibliography](https://quarto.org/docs/authoring/footnotes-and-citations.html) in a number of styles.
+
+#### Some Examples
+
 According to @smith2023 we may consider....and is proven [@smith2023; @doe2021]. A number of online sources [@quartoofficial] report...
 
+To add a bibliography all we need to do is the following:
 
+1. Create a [references.bib](https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo/blob/main/references.bib) file in the folder as this document.
+2. Add a reference to this bib file in the OPML header above.
+3. Populate the bib file with [BibTeX](https://www.bibtex.org/Format/) compatible citations which you can easily generate using [free online tools](https://www.bibme.org/bibtex)
