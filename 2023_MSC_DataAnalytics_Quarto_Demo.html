@@ -103,11 +103,12 @@ div.csl-indent {
   <li><a href="#citations-bibliography" id="toc-citations-bibliography" class="nav-link" data-scroll-target="#citations-bibliography">Citations &amp; Bibliography</a></li>
   </ul>
 </li>
+  <li><a href="#additional-reading" id="toc-additional-reading" class="nav-link" data-scroll-target="#additional-reading">Additional Reading</a></li>
   </ul></nav>
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">Data Analysis for Interactive Environments</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Show/Hide Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button" data-quarto-source-url="https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo.git">View Source</a></li></ul></div></div>
 <p class="subtitle lead">ICA - Analysis of…</p>
 </div>
@@ -134,8 +135,8 @@ div.csl-indent {
   </div>
   
 
-</header><section id="quarto-document-overview" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="quarto-document-overview">Quarto Document Overview</h2>
-<p>This example illustrates some useful functionality within Quarto including the following:</p>
+</header><section id="quarto-document-overview" class="level2"><h2 class="anchored" data-anchor-id="quarto-document-overview">Quarto Document Overview</h2>
+<p>This example illustrates some useful functionality within Quarto.</p>
 <section id="opml-header-options" class="level3"><h3 class="anchored" data-anchor-id="opml-header-options">OPML Header Options</h3>
 <ul>
 <li>
@@ -144,10 +145,16 @@ div.csl-indent {
 <li><a href="https://quarto.org/docs/output-formats/html-code.html">Code Formatting</a></li>
 </ul>
 <p>It’s important to remember that we do <strong>not</strong> need to specify all the options in the OPML header above. They are included purely for demonstration purposes. Minimally, we could just give the document a title and leave it at that!</p>
+<p>When you’re setting a value in the OPML header above hit the TAB key after the colon and that will bring up the menu of possible choices for a particular field, as shown in <a href="#fig-tab_to_show">Figure&nbsp;1</a>.</p>
+<div id="fig-tab_to_show" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/tab_to_show_menu.png" class="img-fluid figure-img" style="width:70.0%" alt="An image of a context senstive menu."></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Press TAB to show field options</figcaption></figure>
+</div>
+<p>However, do <strong>not</strong> forget to leave a SPACE after the colon for each field. For more information on adding images/figures see this <a href="https://quarto.org/docs/authoring/figures.html">link</a>.</p>
 </section><section id="cross-references" class="level3"><h3 class="anchored" data-anchor-id="cross-references">Cross References</h3>
 <p><a href="https://quarto.org/docs/authoring/cross-references.html">Cross-references</a> make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables.</p>
 <section id="some-examples" class="level4"><h4 class="anchored" data-anchor-id="some-examples">Some Examples</h4>
-<p><a href="#fig-temperature">Figure&nbsp;1</a> explores the temperature from May 2023 to September 2023.</p>
+<p><a href="#fig-temperature">Figure&nbsp;2</a> explores the temperature from May 2023 to September 2023.</p>
 <div class="cell" data-layout-align="center" data-hash="2023_MSC_DataAnalytics_Quarto_Demo_cache/html/fig-temperature_ca17a8b19b8a1235cb1b8d4c979d0a46">
 <details><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># this was generated using esquisse</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">ggplot</span>(airquality) <span class="sc">+</span></span>
@@ -173,11 +180,11 @@ div.csl-indent {
 </details><div class="cell-output-display">
 <div id="fig-temperature" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="2023_MSC_DataAnalytics_Quarto_Demo_files/figure-html/fig-temperature-1.png" class="img-fluid figure-img" width="2100"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Temperature (Jan - June 2023).</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;2: Temperature (Jan - June 2023).</figcaption></figure>
 </div>
 </div>
 </div>
-<p>We can add plots with multiple plot components (e.g.&nbsp;a, b,…) as shown in <a href="#fig-airquality">Figure&nbsp;2</a></p>
+<p>We can add plots with multiple plot components (e.g.&nbsp;a, b,…) as shown in <a href="#fig-airquality">Figure&nbsp;3</a></p>
 <div id="fig-airquality" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><details><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
 <span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
@@ -216,7 +223,7 @@ div.csl-indent {
 <figcaption class="figure-caption">(b) A subcaption for this plot 1</figcaption></figure>
 </div>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2: Temperature, Wind, and Ozone level.</figcaption></figure>
+<figcaption class="figure-caption">Figure&nbsp;3: Temperature, Wind, and Ozone level.</figcaption></figure>
 </div>
 <p>Notice that we can add annotations in the R chunk (i.e.&nbsp;the grey sections that contains R code) to do things like set caption, subcaption, width, dpi, aspect ratio, etc.</p>
 <p><a href="#tbl-airquality">Table&nbsp;1</a> presents….</p>
@@ -366,10 +373,10 @@ div.csl-indent {
 </div>
 </div>
 <p>Finally, notice also how the table and figure numbers are automatically set by Quarto. If we re-arrange these elements then the numbers will update automatically.</p>
-</section></section><section id="footnotes" class="level3 page-columns page-full"><h3 class="anchored" data-anchor-id="footnotes">Footnotes</h3>
+</section></section><section id="footnotes" class="level3"><h3 class="anchored" data-anchor-id="footnotes">Footnotes</h3>
 <p>Quarto will use Pandoc to automatically generate <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">footnotes</a> in a number of styles.</p>
-<section id="some-examples-1" class="level4 page-columns page-full"><h4 class="anchored" data-anchor-id="some-examples-1">Some Examples</h4>
-<div class="page-columns page-full"><p>When considering the impact of Sea surface temperature<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> on Ozone<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> level…</p><div class="no-row-height column-margin column-container"><li id="fn1"><p><sup>1</sup>&nbsp;Sea surface temperature (SST), or ocean surface temperature, is the ocean temperature close to the surface.</p></li><li id="fn2"><p><sup>2</sup>&nbsp;Ozone is a molecule composed of three oxygen atoms.</p></li></div></div>
+<section id="some-examples-1" class="level4"><h4 class="anchored" data-anchor-id="some-examples-1">Some Examples</h4>
+<p>When considering the impact of Sea surface temperature<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> on Ozone<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> level…</p>
 </section></section><section id="citations-bibliography" class="level3"><h3 class="anchored" data-anchor-id="citations-bibliography">Citations &amp; Bibliography</h3>
 <p>Quarto will use Pandoc to automatically generate <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html">citations and a bibliography</a> in a number of styles.</p>
 <section id="some-examples-2" class="level4"><h4 class="anchored" data-anchor-id="some-examples-2">Some Examples</h4>
@@ -380,9 +387,13 @@ div.csl-indent {
 <li>Add a reference to this bib file in the OPML header above.</li>
 <li>Populate the bib file with <a href="https://www.bibtex.org/Format/">BibTeX</a> compatible citations which you can easily generate using <a href="https://www.bibme.org/bibtex">free online tools</a>
 </li>
-</ol>
+</ol></section></section></section><section id="additional-reading" class="level2"><h2 class="anchored" data-anchor-id="additional-reading">Additional Reading</h2>
+<ul>
+<li><a href="https://quarto.org/docs/output-formats/html-themes.html">HTML Theming</a></li>
+<li><a href="https://youtu.be/Qrz2rUWM-uY">YouTube - Hello, Quarto: A World of Possibilities (for Reproducible Publishing)</a></li>
+</ul>
 
-</section></section></section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-doe2021" class="csl-entry" role="listitem">
 Doe, Jane, and Michael Johnson. 2021. <span>‘Advancements in Quantum Computing’</span>. <em>Journal of Computing Research</em> 25 (4): 112–30.
 </div>
@@ -392,7 +403,11 @@ Quarto Development Team. 2023. <span>‘Quarto Documentation’</span>. 2023. <a
 <div id="ref-smith2023" class="csl-entry" role="listitem">
 Smith, John. 2023. <span>‘Example Article’</span>. <em>Journal of DAIE</em> 42 (3): 123–45.
 </div>
-</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{j. jones2023,
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<ol>
+<li id="fn1"><p>Sea surface temperature (SST), or ocean surface temperature, is the ocean temperature close to the surface.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Ozone is a molecule composed of three oxygen atoms.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{j. jones2023,
   author = {J. Jones, Jane},
   title = {Data {Analysis} for {Interactive} {Environments}},
   date = {2023-12-14},

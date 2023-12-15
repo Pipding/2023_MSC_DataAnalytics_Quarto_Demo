@@ -31,7 +31,7 @@ format:
     citations-hover: true
     footnotes-hover: true
     #location of footnotes and citations   
-    reference-location: margin
+    reference-location: document #document = at the bottom!
     citation-location: document
     #citation - adds a copyable citation to THIS document at the bottom
     citation: true
@@ -70,22 +70,27 @@ library(downlit)
 
 ## Quarto Document Overview
 
-This example illustrates some useful functionality within Quarto including the following:
+This example illustrates some useful functionality within Quarto.
 
 ### OPML Header Options
 
-* [OPML Header Options](https://quarto.org/docs/reference/formats/opml.html) header 
-* [Pandoc Syntax Highlighting Examples](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)
-* [Code Formatting](https://quarto.org/docs/output-formats/html-code.html)
+-   [OPML Header Options](https://quarto.org/docs/reference/formats/opml.html) header
+-   [Pandoc Syntax Highlighting Examples](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)
+-   [Code Formatting](https://quarto.org/docs/output-formats/html-code.html)
 
 It's important to remember that we do **not** need to specify all the options in the OPML header above. They are included purely for demonstration purposes. Minimally, we could just give the document a title and leave it at that!
 
+When you're setting a value in the OPML header above hit the TAB key after the colon and that will bring up the menu of possible choices for a particular field, as shown in @fig-tab_to_show. 
+
+![Press TAB to show field options](images/tab_to_show_menu.png){width=70% fig-align="center" fig-alt="An image of a context senstive menu." #fig-tab_to_show}
+
+However, do **not** forget to leave a SPACE after the colon for each field. For more information on adding images/figures see this [link](https://quarto.org/docs/authoring/figures.html).
+
 ### Cross References
 
-[Cross-references](https://quarto.org/docs/authoring/cross-references.html) make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables. 
+[Cross-references](https://quarto.org/docs/authoring/cross-references.html) make it easier for readers to navigate your document by providing numbered references and hyperlinks to various entities like figures and tables.
 
 #### Some Examples
-
 
 @fig-temperature explores the temperature from May 2023 to September 2023.
 
@@ -185,7 +190,7 @@ knitr::kable(tail(airquality))
 
 ```
 
-Finally, notice also how the table and figure numbers are automatically set by Quarto. If we re-arrange these elements then the numbers will update automatically. 
+Finally, notice also how the table and figure numbers are automatically set by Quarto. If we re-arrange these elements then the numbers will update automatically.
 
 ### Footnotes
 
@@ -193,8 +198,7 @@ Quarto will use Pandoc to automatically generate [footnotes](https://quarto.org/
 
 #### Some Examples
 
-When considering the impact of Sea surface
-temperature[^1] on Ozone[^2] level...
+When considering the impact of Sea surface temperature[^1] on Ozone[^2] level...
 
 [^1]: Sea surface temperature (SST), or ocean surface temperature, is the ocean temperature close to the surface.
 
@@ -210,6 +214,12 @@ According to @smith2023 we may consider....and is proven [@smith2023; @doe2021].
 
 To add a bibliography all we need to do is the following:
 
-1. Create a [references.bib](https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo/blob/main/references.bib) file in the folder as this document.
-2. Add a reference to this bib file in the OPML header above.
-3. Populate the bib file with [BibTeX](https://www.bibtex.org/Format/) compatible citations which you can easily generate using [free online tools](https://www.bibme.org/bibtex)
+1.  Create a [references.bib](https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo/blob/main/references.bib) file in the folder as this document.
+2.  Add a reference to this bib file in the OPML header above.
+3.  Populate the bib file with [BibTeX](https://www.bibtex.org/Format/) compatible citations which you can easily generate using [free online tools](https://www.bibme.org/bibtex)
+
+## Additional Reading
+
+* [HTML Theming](https://quarto.org/docs/output-formats/html-themes.html)
+* [YouTube - Hello, Quarto: A World of Possibilities (for Reproducible Publishing)](https://youtu.be/Qrz2rUWM-uY)
+
