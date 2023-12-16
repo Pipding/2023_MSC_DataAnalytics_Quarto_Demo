@@ -111,7 +111,7 @@ ggplot(airquality) +
   scale_fill_distiller(palette = "RdYlBu", direction = 1) +
   labs(
     x = "Month Index (May to September)",
-    y = "Temperature(C)",
+    y = "Temperature(°C)",
     fill = "Month"
   ) +
   theme_minimal() +
