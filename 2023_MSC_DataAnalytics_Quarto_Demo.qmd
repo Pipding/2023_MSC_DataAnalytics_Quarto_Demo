@@ -1,8 +1,9 @@
 ---
-title: "Data Analysis for Interactive Environments"
-subtitle: "ICA - Analysis of..."
-author: "Jane J. Jones"
-date: "12.14.2023" #US-format
+title: "Quarto Markdown Demo"
+subtitle: "Useful formatting and display tips and tricks for Quarto"
+author: "Niall McGuinness"
+date: "12/14/23"  #MM/DD/YY
+date-modified: now #notice how easy it is to add a date
 #execute - not everyone wants to see code (echo) or internal warnings and we can also cache code output to speed up our render process - we can still override this in the code chunks (see below)
 execute:
   echo: true
@@ -17,10 +18,12 @@ format:
     theme:            
       light: journal
       dark: darkly
+    #allows text to occupy page width
+    page-layout: full 
     #toc
     toc: true
     toc-location: left
-    toc-title: Table of Contents
+    toc-title: "Table of Contents"
     number-sections: false
     #links
     link-external-newwindow: true
@@ -44,12 +47,11 @@ format:
     code-block-border-left: true
     code-block-bg: true
     code-fold: true #shows all code in collapsed mode
-    code-summary: Hidden Code
     #controls the menu on top RHS, beside title, relating to code
     code-tools:  
       source: https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo.git #adds external link to code accessed in menu
       toggle: true #adds/removes Show/Hide code 
-      caption: Show/Hide Code #user-defined menu title
+      caption: "Code" #user-defined menu title
 ---
 
 ```{r}
