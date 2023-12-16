@@ -1,0 +1,140 @@
+---
+title: "Interactive Plots with Plotly"
+author: "Niall McGuinness"
+date: "12/16/23"  #MM/DD/YY
+date-modified: now #notice how easy it is to add a date
+format: 
+  html:
+    # add a dark/light theme switcher to top RHS
+    theme:            
+      light: journal
+      dark: darkly
+    #allows text to occupy max page width
+    page-layout: full 
+     #code - control how code is presented
+    code-link: true
+    code-line-numbers: true
+    code-overflow: scroll
+    code-copy: true
+    code-block-border-left: true
+    code-block-bg: true
+    code-fold: true #shows all code in collapsed mode
+---
+
+
+```{r}
+#| echo: false
+#| warning: false
+
+# gives us ggplot2, dplyr, readr, tibble etc
+if(!require("tidyverse"))
+  install.packages("tidyverse")
+library(tidyverse)
+
+# interactive plots
+if(!require("plotly"))
+  install.packages("plotly")
+library(plotly)
+
+```
+
+## Creating Interactive Plots with Plotly
+
+We can convert most plots generated using ggplot2 (even those made with Esquisse) to be interactive by doing the following:
+
+a. Include the Plotly library.
+b. Pass the *ggplot()* output into *ggplotly()*.
+
+@fig-mpgweight was generated using Esquisse on a separate simple R file (see  3_EsquisseScratch.R in the same folder as this file).
+
+```{r}
+#| label: fig-mpgweight
+#| fig-cap: Fuel Consumption vs Weight
+#| fig-cap-location: top
+#| fig-align: center
+#| fig-asp: 0.625
+#| echo: true
+#| warning: false
+
+p <- ggplot(mtcars) +
+  aes(x = mpg, y = wt, size = wt) +
+  geom_point(shape = "circle", colour = "#4682B4") +
+  labs(
+    x = "Fuel Consumption (tonnes)", 
+    y = "Weight (kg)") +
+  theme(
+    plot.title = element_text(size = 14L,
+    hjust = 0.5),
+    plot.subtitle = element_text(size = 12L,
+    hjust = 0.5)
+  )
+
+ggplotly(p)
+```
+
+
+@fig-temperature is the same plot from 1_Intro_To_Quarto with the addition of only 1 line of code (i.e. ggplotly(p))
+
+```{r}
+#| label: fig-temperature
+#| fig-cap: Temperature (Jan - June 2023).
+#| fig-cap-location: top
+#| fig-align: center
+#| fig-asp: 0.625
+#| echo: true
+#| warning: false
+
+# month names for x-axis
+month.names <- c("May", "June", "July", "August", "September")
+
+# this was generated using esquisse
+p <- ggplot(airquality) +
+  aes(x = factor(Month, labels = month.names), 
+      y = Temp, fill = Month) +
+  geom_violin(adjust = 0.4, scale = "area") +
+  scale_fill_distiller(palette = "RdYlBu", direction = 1) +
+  labs(
+    x = "Month",
+    y = "Temperature(°C)",
+    fill = "Month"
+  ) +
+  theme_minimal() +
+  facet_wrap(
+    vars(Month),
+    scales = "free_x",
+    ncol = 5L,
+    nrow = 1L
+  )
+
+ggplotly(p)
+```
+
+Finally, @fig-dummyheat illustrates a heat map with colours chosen using the [Coolors](https://coolors.co/palettes/trending) interactive color pallette picker site.
+
+```{r}
+#| label: fig-dummyheat
+#| fig-cap: Some Data
+#| fig-cap-location: top
+#| fig-align: center
+#| echo: true
+#| warning: false
+
+# Dummy data
+x <- LETTERS[1:12]
+y <- paste0("var", seq(1,12))
+data <- expand.grid(X=x, Y=y)
+data$Z <- runif(144, 0, 5)
+ 
+# Heatmap 
+p <- ggplot(data, aes(X, Y, fill= Z)) + 
+  geom_tile() +
+  scale_fill_gradient(low = "#ccff33", high = "#2b9348")
+
+ggplotly(p)
+```
+
+
+
+
+
+

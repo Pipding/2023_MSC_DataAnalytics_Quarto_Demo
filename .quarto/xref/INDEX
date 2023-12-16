@@ -3,5 +3,14 @@
     "2023_MSC_DataAnalytics_Quarto_Demo.html": "b8d09c03",
     "2023_MSC_DataAnalytics_Quarto_Demo.pptx": "f83e221c",
     "2023_MSC_DataAnalytics_Quarto_Demo.tex": "e9306a13"
+  },
+  "1 - Intro to Quarto.qmd": {
+    "1 - Intro to Quarto.html": "ddfc1ee9"
+  },
+  "1_Intro_To_Quarto.qmd": {
+    "1_Intro_To_Quarto.html": "5fa4ac19"
+  },
+  "2_Interactive_Plots_With_Plotly.qmd": {
+    "2_Interactive_Plots_With_Plotly.html": "11e62d73"
   }
 }
