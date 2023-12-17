@@ -8,7 +8,8 @@
     "1 - Intro to Quarto.html": "ddfc1ee9"
   },
   "1_Intro_To_Quarto.qmd": {
-    "1_Intro_To_Quarto.html": "5fa4ac19"
+    "1_Intro_To_Quarto.html": "5fa4ac19",
+    "1_Intro_To_Quarto.tex": "f44ebdb9"
   },
   "2_Interactive_Plots_With_Plotly.qmd": {
     "2_Interactive_Plots_With_Plotly.html": "11e62d73"

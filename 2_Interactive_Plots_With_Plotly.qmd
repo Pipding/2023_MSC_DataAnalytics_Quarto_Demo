@@ -3,6 +3,11 @@ title: "Interactive Plots with Plotly"
 author: "Niall McGuinness"
 date: "12/16/23"  #MM/DD/YY
 date-modified: now #notice how easy it is to add a date
+#execute - not everyone wants to see code (echo) or internal warnings and we can also cache code output to speed up our render process - we can still override this in the code chunks (see below)
+execute:
+  echo: true
+  warning: false
+  cache: true
 format: 
   html:
     # add a dark/light theme switcher to top RHS
@@ -11,6 +16,11 @@ format:
       dark: darkly
     #allows text to occupy max page width
     page-layout: full 
+    #toc
+    toc: true
+    toc-location: left
+    toc-title: "Table of Contents"
+    number-sections: false
      #code - control how code is presented
     code-link: true
     code-line-numbers: true
@@ -36,6 +46,11 @@ if(!require("plotly"))
   install.packages("plotly")
 library(plotly)
 
+# support for color blind users - see scale_color_colorblind() below
+if(!require("ggthemes"))
+  install.packages("ggthemes")
+library(ggthemes)
+
 ```
 
 ## Creating Interactive Plots with Plotly
@@ -45,7 +60,9 @@ We can convert most plots generated using ggplot2 (even those made with Esquisse
 a. Include the Plotly library.
 b. Pass the *ggplot()* output into *ggplotly()*.
 
-@fig-mpgweight was generated using Esquisse on a separate simple R file (see  3_EsquisseScratch.R in the same folder as this file).
+### Interactive Scatterplot
+
+@fig-mpgweight was generated using Esquisse on a separate simple R file (see  [4_EsquisseScratch](./4_EsquisseScratch.R) in the same folder as this file).
 
 ```{r}
 #| label: fig-mpgweight
@@ -59,6 +76,7 @@ b. Pass the *ggplot()* output into *ggplotly()*.
 p <- ggplot(mtcars) +
   aes(x = mpg, y = wt, size = wt) +
   geom_point(shape = "circle", colour = "#4682B4") +
+  scale_color_colorblind() +
   labs(
     x = "Fuel Consumption (tonnes)", 
     y = "Weight (kg)") +
@@ -69,9 +87,10 @@ p <- ggplot(mtcars) +
     hjust = 0.5)
   )
 
-ggplotly(p)
+ggplotly(p) 
 ```
 
+### Interactive Boxplot
 
 @fig-temperature is the same plot from 1_Intro_To_Quarto with the addition of only 1 line of code (i.e. ggplotly(p))
 
@@ -90,13 +109,14 @@ month.names <- c("May", "June", "July", "August", "September")
 # this was generated using esquisse
 p <- ggplot(airquality) +
   aes(x = factor(Month, labels = month.names), 
-      y = Temp, fill = Month) +
+      y = Temp, 
+      fill = Month) +
   geom_violin(adjust = 0.4, scale = "area") +
-  scale_fill_distiller(palette = "RdYlBu", direction = 1) +
+  scale_fill_distiller(palette = "RdYlBu", 
+                       direction = 1) +
   labs(
     x = "Month",
-    y = "Temperature(°C)",
-    fill = "Month"
+    y = "Temperature(°C)"
   ) +
   theme_minimal() +
   facet_wrap(
@@ -109,7 +129,11 @@ p <- ggplot(airquality) +
 ggplotly(p)
 ```
 
-Finally, @fig-dummyheat illustrates a heat map with colours chosen using the [Coolors](https://coolors.co/palettes/trending) interactive color pallette picker site.
+### Interactive Heatmap
+
+Finally, @fig-dummyheat illustrates a heat map with colours chosen from an interactive color palette picker site, [Coolors](https://coolors.co/palettes/trending) and specified with with the  *scale_fill_gradient2()* method commented out in the code below. 
+
+We also support color blind users by including scale_color_colorblind() and the *ggthemes* library above.
 
 ```{r}
 #| label: fig-dummyheat
@@ -128,10 +152,35 @@ data$Z <- runif(144, 0, 5)
 # Heatmap 
 p <- ggplot(data, aes(X, Y, fill= Z)) + 
   geom_tile() +
-  scale_fill_gradient(low = "#ccff33", high = "#2b9348")
-
+  # scale_color_colorblind() +
+  scale_fill_gradient2(
+    low = "#184e77", 
+    high = "#52b69a") + 
+   labs(
+    x = "An x-axis label",
+    y = "A y-axis label",
+    fill = "Amazing Legend"
+  )
+  
 ggplotly(p)
 ```
+
+### Other Possibilities 
+
+Obviously, most of the plots generated with ggplot can be converted to this interactive format including:
+
+- **Scatter Plots**: Show relationships between two continuous variables.
+- **Line Plots**: Useful for time series data or connecting points in order.
+- **Bar Charts**: Display categorical data, includes regular and stacked bar charts.
+- **Histograms**: Show the distribution of a continuous variable.
+- **Box Plots**: Display distribution of a variable, showing quartiles and outliers.
+- **Violin Plots**: Similar to box plots, but include a kernel density estimation.
+- **Heatmaps**: Represent data where colors denote values.
+- **Facetted Plots**: Support interactive facets, breaking down data into multiple panels.
+- **Error Bars and Confidence Intervals**: Added to plots like scatter plots or bar charts to represent data uncertainty.
+- **Area Plots**: Showcase quantitative data visually.
+- **Density Plots**: Visualize the distribution of a continuous variable.
+
 
 
 

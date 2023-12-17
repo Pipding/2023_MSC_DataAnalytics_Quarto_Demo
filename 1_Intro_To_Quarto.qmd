@@ -1,5 +1,5 @@
 ---
-title: "Intro to Quarto"
+title: "Introduction to Quarto"
 subtitle: "Useful formatting and display tips and tricks for getting started with Quarto"
 author: "Niall McGuinness"
 date: "12/14/23"  #MM/DD/YY
@@ -53,6 +53,11 @@ format:
       toggle: true #adds/removes Show/Hide code 
       caption: "Code" #user-defined menu title
 ---
+
+```{r}
+#| include: false
+options(downlit.attached = "ggplot2")
+```
 
 ```{r}
 #| echo: false
@@ -137,8 +142,11 @@ We can add plots with multiple plot components (e.g. a, b,...) as shown in @fig-
 ```{r}
 #| label: fig-airquality
 #| fig-cap: Temperature, Wind, and Ozone level.
-#| fig-subcap: A subcaption for this plot 1
+#| fig-subcap: 
+#|  - A subcaption for plot 1
+#|  - A subcaption for plot 2
 #| fig-align: center
+#| layout-ncol: 2
 #| echo: true
 
 ggplot(airquality, aes(Temp, Ozone)) + 
@@ -154,13 +162,6 @@ ggplot(airquality, aes(Temp, Ozone)) +
     axis.title.y = element_text(margin = margin(r = 10, l = 10))   # Adjust Y axis title
   ) 
 
-#| label: fig-airquality
-#| fig-cap: Temperature, Wind, and Ozone level.
-#| fig-subcap: A subcaption for this plot 2
-#| fig-align: center
-#| fig-dpi: 100
-#| fig-format: jpeg
-#| echo: true
 
 ggplot(airquality, aes(Wind, Temp)) + 
   geom_point() + 
@@ -177,7 +178,7 @@ ggplot(airquality, aes(Wind, Temp)) +
 
 ```
 
-Notice that we can add annotations in the R chunk (i.e. the grey sections that contains R code) to do things like set caption, subcaption, width, dpi, aspect ratio, etc.
+Notice that we can add annotations in the R chunk (i.e. the grey sections that contains R code) to do things like set caption, subcaption, width, dpi, aspect ratio, etc. We can learn more about Figures [here](https://quarto.org/docs/authoring/figures.html).
 
 @tbl-airquality presents....
 

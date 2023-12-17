@@ -1,6 +1,3 @@
-#' @title 3_EsquisseScratch.R
-#' @author NMCG
-#' @bugs No
 #' @references https://towardsdatascience.com/how-to-analyze-data-quickly-without-tableau-but-close-66eb1f2fffd2
 #' @references https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html
 #' @references https://r-graph-gallery.com/
@@ -15,7 +12,7 @@ if(!require("esquisse"))
 library(esquisse)
 
 # uncomment, design your plot, then copy the code (as below) and test it out!
-esquisser(mtcars)
+esquisser(airquality)
 
 # ggplot(mtcars) +
 #   aes(x = mpg, y = wt, size = wt) +

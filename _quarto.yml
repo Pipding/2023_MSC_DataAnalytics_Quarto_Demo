@@ -1,5 +1,10 @@
 project:
-  title: "2023_MSC_DataAnalytics_Quarto_Demo"
+  type: website 
 
-editor: visual
-
+# See https://youtu.be/_f3latmOhew?t=1051 for more info on web site creation
+website: 
+  title: "2023 - MSC - ICA - Quarto Examples"
+  navbar: 
+    left:
+      - 1_Intro_To_Quarto.qmd
+      - 2_Interactive_Plots_With_Plotly.qmd
