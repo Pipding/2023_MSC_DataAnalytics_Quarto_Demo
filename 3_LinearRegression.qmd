@@ -1,0 +1,113 @@
+---
+title: "Linear Regression in R"
+author: "Niall McGuinness"
+date: "12/17/23"  #MM/DD/YY
+date-modified: now #notice how easy it is to add a date
+#execute - not everyone wants to see code (echo) or internal warnings and we can also cache code output to speed up our render process - we can still override this in the code chunks (see below)
+execute:
+  echo: true
+  warning: false
+  cache: true
+format: 
+  html:
+    # add a dark/light theme switcher to top RHS
+    theme:            
+      light: journal
+      dark: darkly
+    #allows text to occupy max page width
+    page-layout: full 
+    #toc
+    toc: true
+    toc-location: left
+    toc-title: "Table of Contents"
+    number-sections: false
+     #code - control how code is presented
+    code-link: true
+    code-line-numbers: true
+    code-overflow: scroll
+    code-copy: true
+    code-block-border-left: true
+    code-block-bg: true
+    code-fold: true #shows all code in collapsed mode
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+# gives us ggplot2, dplyr, readr, tibble etc
+if(!require("tidyverse"))
+  install.packages("tidyverse")
+library(tidyverse)
+```
+
+### Plotting Linear Regression with plot()
+
+@fig-linear_regression_inbuilt illustrates the scatterplot of the two variables (Weight vs Height) along with a linear regression line and includes summary statistics for the linear regression model including:
+
+* **Coefficients**: Explain the meaning of the slope and intercept in the context of your data.
+* **Significance Levels**: Discuss the p-values and what they indicate about the relationships.
+* **R-squared value**: Explain how much of the variance in the dependent variable is explained by the model.
+
+```{r}
+#| label: fig-linear_regression_inbuilt
+#| fig-cap: Weight vs Height Linear Regression Model (using plot)
+#| fig-width: 8
+#| fig-cap-location: top
+#| fig-align: center
+
+height <- c(151, 174, 138, 186, 128, 136, 179, 163, 152, 131)  #weight
+weight <- c(63, 81, 56, 91, 47, 57, 76, 72, 62, 48) #height
+
+# Apply the lm() function.
+relation <- lm(weight~height)
+
+plot(height,weight,col = "blue",
+     abline(lm(weight~height)),cex = 1.3,pch = 16,
+     xlab = "Height(cm)", ylab = "Weight(Kg)")
+
+# print statistics
+print(summary(relation))
+
+```
+
+### Plotting Linear Regression with plot()
+
+@fig-linear_regression_ggplot illustrates the same data as @fig-linear_regression_inbuilt but uses ggplot() to plot the output of the model.
+
+```{r}
+#| label: fig-linear_regression_ggplot
+#| fig-cap: Weight vs Height Linear Regression Model (using ggplot)
+#| fig-width: 8
+#| fig-cap-location: top
+#| fig-align: center
+
+# convert to a dataframe to use ggplot()
+data <- data.frame(
+  height <- c(151, 174, 138, 186, 128, 136, 179, 163, 152, 131),
+  weight <- c(63, 81, 56, 91, 47, 57, 76, 72, 62, 48)
+)
+
+# Run linear regression
+model <- lm(weight~height, data = data)
+
+# View the summary of the model
+summary(model)
+
+#using ggplot
+p <- ggplot(data, aes(x = height, y = weight)) +
+  geom_point() +
+  labs(
+    x = "Height(cm)",
+    y = "Weight(Kg)"
+  ) +
+  theme_minimal()
+
+# Add the linear regression line
+p + geom_smooth(method = "lm", se = FALSE, color = "blue")
+
+```
+
+
+
+

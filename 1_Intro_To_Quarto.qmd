@@ -55,11 +55,6 @@ format:
 ---
 
 ```{r}
-#| include: false
-options(downlit.attached = "ggplot2")
-```
-
-```{r}
 #| echo: false
 #| warning: false
 
@@ -68,10 +63,10 @@ if(!require("tidyverse"))
   install.packages("tidyverse")
 library(tidyverse)
 
-# allows code-link in OPML to jump to documentation on code click
-if(!require("downlit"))
-  install.packages("downlit")
-library(downlit)
+# allows paginated tables
+if(!require("DT"))
+  install.packages("DT")
+library(DT)
 
 ```
 
@@ -105,7 +100,7 @@ However, do **not** forget to leave a SPACE after the colon for each field. For 
 #| label: fig-temperature
 #| fig-cap: Temperature (Jan - June 2023).
 #| fig-align: center
-#| fig-dpi: 300
+#| out-width: 50%
 #| fig-format: png
 #| echo: true
 
@@ -125,9 +120,9 @@ ggplot(airquality) +
   ) +
   theme_minimal() +
   theme(
+    legend.position = "none",
     axis.title.x = element_text(margin = margin(t = 10, b = 10)),  # Adjust X axis title
     axis.title.y = element_text(margin = margin(r = 10, l = 10))   # Adjust Y axis title
-
   ) +
   facet_wrap(
     vars(Month),
@@ -147,6 +142,7 @@ We can add plots with multiple plot components (e.g. a, b,...) as shown in @fig-
 #|  - A subcaption for plot 2
 #| fig-align: center
 #| layout-ncol: 2
+#| out-width: 50%
 #| echo: true
 
 ggplot(airquality, aes(Temp, Ozone)) + 
@@ -180,14 +176,15 @@ ggplot(airquality, aes(Wind, Temp)) +
 
 Notice that we can add annotations in the R chunk (i.e. the grey sections that contains R code) to do things like set caption, subcaption, width, dpi, aspect ratio, etc. We can learn more about Figures [here](https://quarto.org/docs/authoring/figures.html).
 
-@tbl-airquality presents....
+@tbl-airquality presents the first rows of the *airquality* dataset using the *kable* library that comes with the *tidyverse* package ....
 
 ```{r}
 #| label: tbl-airquality
 #| tbl-cap: Air Quality Heads
 #| echo: true
 
-knitr::kable(head(airquality))
+# show the first 8 rows
+knitr::kable(head(airquality, 8))
 
 ```
 
@@ -202,7 +199,8 @@ We can also do override the settings in the OPML header above and turn source co
 #| warning: true
 #| cache: false
 
-knitr::kable(tail(airquality))
+# show the first 5 rows + pagination
+DT::datatable(airquality, options = list(pageLength = 5))
 
 ```
 

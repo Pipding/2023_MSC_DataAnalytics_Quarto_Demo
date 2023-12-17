@@ -8,3 +8,4 @@ website:
     left:
       - 1_Intro_To_Quarto.qmd
       - 2_Interactive_Plots_With_Plotly.qmd
+      - 3_LinearRegression.qmd

@@ -90,7 +90,7 @@ p <- ggplot(mtcars) +
 ggplotly(p) 
 ```
 
-### Interactive Boxplot
+### Interactive Violinplot
 
 @fig-temperature is the same plot from 1_Intro_To_Quarto with the addition of only 1 line of code (i.e. ggplotly(p))
 
@@ -119,6 +119,7 @@ p <- ggplot(airquality) +
     y = "Temperature(°C)"
   ) +
   theme_minimal() +
+  theme(legend.position = "none") +
   facet_wrap(
     vars(Month),
     scales = "free_x",
@@ -133,7 +134,7 @@ ggplotly(p)
 
 Finally, @fig-dummyheat illustrates a heat map with colours chosen from an interactive color palette picker site, [Coolors](https://coolors.co/palettes/trending) and specified with with the  *scale_fill_gradient2()* method commented out in the code below. 
 
-We also support color blind users by including scale_color_colorblind() and the *ggthemes* library above.
+We also support color blind users by including *scale_color_colorblind()* and the *ggthemes* library above.
 
 ```{r}
 #| label: fig-dummyheat

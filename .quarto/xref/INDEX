@@ -13,5 +13,8 @@
   },
   "2_Interactive_Plots_With_Plotly.qmd": {
     "2_Interactive_Plots_With_Plotly.html": "11e62d73"
+  },
+  "3_LinearRegression.qmd": {
+    "3_LinearRegression.html": "dc570b46"
   }
 }
