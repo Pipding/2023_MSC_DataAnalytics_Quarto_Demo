@@ -4,6 +4,16 @@
 
 # this code doesnt run, I just have it here, in the package, to quickly create the R code for ggplots using esquisse
 
+# gives us ggplot2, dplyr, readr, tibble etc
+if(!require("tidyverse"))
+  install.packages("tidyverse")
+library(tidyverse)
+
+# allows us to create ggplots interactively - see 4_EsquisseScratch.R
+if(!require("esquisse"))
+  install.packages("esquisse")
+library(esquisse)
+
 # uncomment, design your plot, then copy the code (as below) and test it out!
 esquisser(airquality)
 

@@ -2,6 +2,9 @@
 title: "Interactive Plots with Plotly"
 ---
 
+<!-- Gather all the install and load R code in common.qmd and refer to it here-->
+{{< include common.qmd >}}
+
 ## Creating Interactive Plots with Plotly
 
 We can convert most plots generated using ggplot2 (even those made with Esquisse) to be interactive by doing the following:
