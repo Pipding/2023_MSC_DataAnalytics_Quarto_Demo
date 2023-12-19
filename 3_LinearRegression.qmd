@@ -1,45 +1,6 @@
 ---
 title: "Linear Regression in R"
-author: "Niall McGuinness"
-date: "12/17/23"  #MM/DD/YY
-date-modified: now #notice how easy it is to add a date
-#execute - not everyone wants to see code (echo) or internal warnings and we can also cache code output to speed up our render process - we can still override this in the code chunks (see below)
-execute:
-  echo: true
-  warning: false
-  cache: true
-format: 
-  html:
-    # add a dark/light theme switcher to top RHS
-    theme:            
-      light: journal
-      dark: darkly
-    #allows text to occupy max page width
-    page-layout: full 
-    #toc
-    toc: true
-    toc-location: left
-    toc-title: "Table of Contents"
-    number-sections: false
-     #code - control how code is presented
-    code-link: true
-    code-line-numbers: true
-    code-overflow: scroll
-    code-copy: true
-    code-block-border-left: true
-    code-block-bg: true
-    code-fold: true #shows all code in collapsed mode
 ---
-
-```{r}
-#| echo: false
-#| warning: false
-
-# gives us ggplot2, dplyr, readr, tibble etc
-if(!require("tidyverse"))
-  install.packages("tidyverse")
-library(tidyverse)
-```
 
 ### Plotting Linear Regression with plot()
 

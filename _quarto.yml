@@ -1,11 +1,76 @@
-project:
-  type: website 
-
 # See https://youtu.be/_f3latmOhew?t=1051 for more info on web site creation
+
+project:
+  type: website
+
 website: 
-  title: "2023 - MSC - ICA - Quarto Examples"
+  title: "2023 - Quarto Examples"
   navbar: 
     left:
       - 1_Intro_To_Quarto.qmd
       - 2_Interactive_Plots_With_Plotly.qmd
       - 3_LinearRegression.qmd
+
+# author etc      
+author: "Niall McGuinness"
+date: "12/16/23"  #MM/DD/YY
+date-modified: now #notice how easy it is to add a date
+
+# caching, code output and warning visibility
+execute:
+  echo: true
+  warning: false
+  cache: true  
+
+# add a dark/light theme switcher to top RHS
+theme:            
+  light: journal
+  dark: darkly
+  
+#toc
+toc: true
+toc-location: left
+toc-title: "Table of Contents"
+number-sections: false
+
+#code colouring
+highlight-style: arrow 
+
+#allows text to occupy page width
+page-layout: full
+
+#links
+link-external-newwindow: true
+link-external-icon: true
+
+#bibliography
+bibliography: references.bib #see the BibTex file in same folder as this file
+
+#citations & footnotes - allow us to hover over these elements and see content
+citations-hover: true
+footnotes-hover: true
+
+#location of footnotes and citations   
+reference-location: document #document = at the bottom!
+citation-location: document
+
+#citation - adds a copyable citation to THIS document at the bottom
+citation: true
+lang: en-GB
+
+#code - control how code is presented
+code-link: true
+code-line-numbers: true
+code-overflow: scroll
+code-copy: true
+code-block-border-left: true
+code-block-bg: true
+code-fold: true #shows all code in collapsed mode
+
+#controls the menu on top RHS, beside title, relating to code
+code-tools:  
+  source: https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo.git #adds external link to code accessed in menu
+  toggle: true #adds/removes Show/Hide code 
+  caption: "Code" #user-defined menu title
+ 
+

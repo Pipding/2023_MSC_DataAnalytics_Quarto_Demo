@@ -1,74 +1,6 @@
 ---
 title: "Introduction to Quarto"
-subtitle: "Useful formatting and display tips and tricks for getting started with Quarto"
-author: "Niall McGuinness"
-date: "12/14/23"  #MM/DD/YY
-date-modified: now #notice how easy it is to add a date
-#execute - not everyone wants to see code (echo) or internal warnings and we can also cache code output to speed up our render process - we can still override this in the code chunks (see below)
-execute:
-  echo: true
-  warning: false
-  cache: true
-format: 
-  html:
-    #code colouring
-    highlight-style: arrow 
-    #add a dark/light toggle in the top RHS of the page - make sure you maximise the browser window in case you cant see the toggle 
-    # add a dark/light theme switcher to top RHS
-    theme:            
-      light: journal
-      dark: darkly
-    #allows text to occupy page width
-    page-layout: full 
-    #toc
-    toc: true
-    toc-location: left
-    toc-title: "Table of Contents"
-    number-sections: false
-    #links
-    link-external-newwindow: true
-    link-external-icon: true
-    #bibliography
-    bibliography: references.bib #see the BibTex file in same folder as this file
-     #citations & footnotes - allow us to hover over these elements and see content
-    citations-hover: true
-    footnotes-hover: true
-    #location of footnotes and citations   
-    reference-location: document #document = at the bottom!
-    citation-location: document
-    #citation - adds a copyable citation to THIS document at the bottom
-    citation: true
-    lang: en-GB
-    #code - control how code is presented
-    code-link: true
-    code-line-numbers: true
-    code-overflow: scroll
-    code-copy: true
-    code-block-border-left: true
-    code-block-bg: true
-    code-fold: true #shows all code in collapsed mode
-    #controls the menu on top RHS, beside title, relating to code
-    code-tools:  
-      source: https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo.git #adds external link to code accessed in menu
-      toggle: true #adds/removes Show/Hide code 
-      caption: "Code" #user-defined menu title
 ---
-
-```{r}
-#| echo: false
-#| warning: false
-
-# gives us ggplot2, dplyr, readr, tibble etc
-if(!require("tidyverse"))
-  install.packages("tidyverse")
-library(tidyverse)
-
-# allows paginated tables
-if(!require("DT"))
-  install.packages("DT")
-library(DT)
-
-```
 
 ## Quarto Document Overview
 
@@ -228,7 +160,7 @@ According to @smith2023 we may consider....and is proven [@smith2023; @doe2021].
 
 To add a bibliography all we need to do is the following:
 
-1.  Create a [references.bib](https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo/blob/main/references.bib) file in the folder as this document.
+1.  Create a [references.bib](https://github.com/nmcguinness/2023_MSC_DataAnalytics_Quarto_Demo/blob/main/references.bib) file in the **same** folder as this document (or add a path in the OPML header).
 2.  Add a reference to this bib file in the OPML header above.
 3.  Populate the bib file with [BibTeX](https://www.bibtex.org/Format/) compatible citations which you can easily generate using [free online tools](https://www.bibme.org/bibtex)
 

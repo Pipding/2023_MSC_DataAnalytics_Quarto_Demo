@@ -2,15 +2,6 @@
 #' @references https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html
 #' @references https://r-graph-gallery.com/
 
-# support for ggplot2
-if(!require("tidyverse"))
-  install.packages("tidyverse")
-library(tidyverse)
-
-if(!require("esquisse"))
-  install.packages("esquisse")
-library(esquisse)
-
 # uncomment, design your plot, then copy the code (as below) and test it out!
 esquisser(airquality)
 
