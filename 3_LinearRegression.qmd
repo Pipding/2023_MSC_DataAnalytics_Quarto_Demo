@@ -1,6 +1,5 @@
 ---
 title: "Linear Regression in R"
-include-before-body: common.qmd
 ---
 
 <!-- Gather all the install and load R code in common.qmd and refer to it here-->
