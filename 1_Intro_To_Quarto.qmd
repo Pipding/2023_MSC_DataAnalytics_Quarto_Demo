@@ -1,10 +1,13 @@
 ---
-title: "Introduction to Quarto"
+title: "Introduction to Quarto Web Pages"
 ---
 
-## Quarto Document Overview
+## Quarto Web Pages Overview
 
-This example illustrates some useful functionality within Quarto.
+This example illustrates some useful functionality within Quarto. To run this project click on "Render Website" in the Build 
+window on the top RHS of the R Studio IDE, as shown in @fig-render_site.
+
+![Press TAB to show field options](images/press_to_render_website.png){width=70% fig-align="center" fig-alt="An image of a menu option to render the sute." #fig-render_site}
 
 ### OPML Header Options
 

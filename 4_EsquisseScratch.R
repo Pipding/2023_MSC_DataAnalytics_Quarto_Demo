@@ -2,6 +2,8 @@
 #' @references https://cran.r-project.org/web/packages/esquisse/vignettes/get-started.html
 #' @references https://r-graph-gallery.com/
 
+# this code doesnt run, I just have it here, in the package, to quickly create the R code for ggplots using esquisse
+
 # uncomment, design your plot, then copy the code (as below) and test it out!
 esquisser(airquality)
 
