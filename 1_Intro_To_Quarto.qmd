@@ -2,6 +2,20 @@
 title: "Introduction to Quarto Web Pages"
 ---
 
+```{r Install dependencies}
+if(!require('plyr'))
+  install.packages('plyr')
+
+if(!require('plotly'))
+  install.packages('plotly')
+
+if(!require('ggthemes'))
+  install.packages('plotly')
+
+library('plyr')
+library('plotly')
+```
+
 <!-- Gather all the install and load R code in common.qmd and refer to it here-->
 {{< include common.qmd >}}
 
